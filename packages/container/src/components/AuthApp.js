@@ -1,5 +1,5 @@
+import {mount} from 'auth/AuthApp';
 import React, {useEffect, useRef} from 'react';
-import {mount} from 'marketing/MarketingApp';
 import {useHistory} from 'react-router-dom';
 
 export default () => {
@@ -15,13 +15,11 @@ export default () => {
         if (pathname !== nextPathname) {
           history.push(nextPathname);
         }
-      }
+      },
     });
 
-    console.log({authInitialPath: history.location.pathname});
-
     history.listen(onParentNavigate);
-  }, [])
+  }, []);
 
-  return <div ref={ref}/>
-}
+  return <div ref={ref}/>;
+};

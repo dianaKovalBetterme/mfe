@@ -1,14 +1,13 @@
 import React from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
-import {createGenerateClassName} from '@material-ui/core/styles';
-import {StylesProvider} from '@material-ui/core';
+import {createGenerateClassName, StylesProvider,} from '@material-ui/core/styles';
 
-import Header from './components/Header';
 import MarketingApp from './components/MarketingApp';
 import AuthApp from './components/AuthApp';
+import Header from './components/Header';
 
 const generateClassName = createGenerateClassName({
-  prefix: 'co',
+  productionPrefix: 'co',
 });
 
 export default () => {
@@ -24,5 +23,5 @@ export default () => {
         </div>
       </StylesProvider>
     </BrowserRouter>
-  )
-}
+  );
+};
