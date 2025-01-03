@@ -18,6 +18,8 @@ export default () => {
       }
     });
 
+    console.log({authInitialPath: history.location.pathname});
+
     history.listen(onParentNavigate);
   }, [])
 
